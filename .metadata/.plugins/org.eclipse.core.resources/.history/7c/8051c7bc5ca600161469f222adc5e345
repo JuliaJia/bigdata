@@ -1,0 +1,10 @@
+package j2se.core.io.stream;
+
+public class Love {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

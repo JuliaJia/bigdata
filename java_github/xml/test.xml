@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books count="4">
+  <book>
+    <id>1</id>
+    <name>逗逼宝典</name>
+  </book>
+  <book>
+    <id>2</id>
+    <name>逗逼圣经</name>
+  </book>
+  <book>
+    <id>3</id>
+    <name>逗逼是怎样炼成的</name>
+  </book>
+</books>
+

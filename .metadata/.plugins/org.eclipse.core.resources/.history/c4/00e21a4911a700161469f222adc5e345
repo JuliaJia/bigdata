@@ -1,0 +1,5 @@
+package job.job01.biz;
+
+public class ContactManager {
+
+}

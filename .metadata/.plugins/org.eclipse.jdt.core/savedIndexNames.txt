@@ -1,0 +1,6 @@
+INDEX VERSION 1.129+F:\study\code\bigdata_github\.metadata\.plugins\org.eclipse.jdt.core
+742958677.index
+3936209139.index
+2630129091.index
+3271193799.index
+3494716225.index
