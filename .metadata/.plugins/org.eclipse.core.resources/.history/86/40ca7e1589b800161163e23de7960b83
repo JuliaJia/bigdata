@@ -1,0 +1,31 @@
+package algorithm.dataStructure.case4;
+
+import java.io.Console;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class StackCase1 {
+
+	public static void main(String[] args) {
+		Stack operator = new Stack();
+		String inorder = new String();
+		int inposition= 0;
+		int operator1 = 0;
+		Console console = null;
+		Scanner scan = null;
+		console = System.console();
+		System.out.println("Enter an inorder expression: ");
+		if(console != null){
+			
+			
+			scan = new Scanner(console.reader());
+			while(scan.hasNext()){
+				String string = scan.next();
+				System.out.println(string);
+			}
+		}
+
+
+	}
+
+}

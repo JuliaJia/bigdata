@@ -1,5 +1,0 @@
-package job.job01.dao;
-
-public interface IGroup {
-
-}
