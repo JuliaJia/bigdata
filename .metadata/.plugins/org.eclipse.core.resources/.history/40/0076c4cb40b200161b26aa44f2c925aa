@@ -1,0 +1,72 @@
+package algorithm.dataStructure.case2;
+
+
+
+public class Dlink {
+	
+	public Node head;
+	public Node tail;
+	
+	public int count;
+	
+	public Dlink() {
+		count = 0;
+		head = null;
+		tail = null;
+	}
+	
+	public void addAfter(int id,int it){
+		Node curr = new Node(id,it);
+		curr.setBefour(tail);
+		tail = curr;
+		count++;
+	}
+	
+	public Node findNode(int it){
+		Node curr = tail;
+		if(tail != null){
+			while(curr != null){
+				if(curr.data() == it){
+					return curr;
+				}
+				curr = curr.befour();
+			}
+		}
+		return null;
+	}
+	
+	public void delNode(int it){
+		Node temp = findNode(it);
+		//System.out.println(temp);
+
+		if(temp != null){
+			if(temp.next() == null){
+				tail = temp.befour();
+				tail.setNext(null);
+
+				
+			}else if(temp.befour() == null){
+				head = temp.next();
+				head.setBefour(null);
+				System.out.println(temp);
+				/*System.out.println(temp);
+				System.out.println(temp.next());
+				System.out.println(temp.befour());*/
+			}else{
+				temp.befour().setNext(temp.next());
+				temp.next().setBefour(temp.befour());
+
+			}
+		}
+	}
+	
+	public void displayAll(){
+		Node curr = tail;
+		while(curr != null){
+			curr.display();
+			curr = curr.befour();
+		}
+		
+	}
+
+}

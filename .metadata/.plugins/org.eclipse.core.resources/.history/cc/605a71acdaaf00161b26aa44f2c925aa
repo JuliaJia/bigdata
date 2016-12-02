@@ -1,0 +1,99 @@
+package algorithm.dataStructure.linkedList2;
+//我们先定义link类！！！
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
+import org.w3c.dom.stylesheets.LinkStyle;
+
+import algorithm.dataStructure.linkedList.Node;
+
+public class link {
+	//先来两个初始化需要用到的变量；
+	private link next;
+	private int data;
+	private link first;
+	private link tail;
+	
+	//在来link的构造函数
+	link(int it,link nextval){
+		data = it;
+		next = nextval;
+	}
+	
+	//link构造函数重载
+	link(link nextval){
+		next = nextval;
+	}
+	
+	link() {
+		//data = it;
+		//this.data = data;
+		this.first = null;
+		//this.tail = new link(data);
+		this.tail = new link(null);
+	}
+	
+	
+	
+	//定义next方法
+	public link next(){
+		return next;
+	}
+	
+	//定义setnext方法
+	public link setnext(link nextval){
+		next = nextval;
+		return next;
+	}
+	
+	public int data(){
+		return data;
+	}
+	
+	public int setdata(int it){
+		data = it;
+		return data;
+	}
+	
+	link freel = null;
+	
+	public link get(link nextval){
+		if(freel == null){
+			return new link(nextval);
+		}
+		link temp = freel;
+		freel = freel.next();
+		temp.setnext(nextval);
+		return temp;
+	}
+	
+	
+	public void append(int it){
+		link next = new link(it,null);
+		//System.out.println(next);
+		tail.setnext(next);
+		tail = tail.next;
+		//System.out.println(tail);
+	}
+	
+	public void display(){
+		System.out.println(data + " ");
+	}
+	public void displayAllNodes(){
+		link current = first;
+		while(current != null){
+			System.out.println(first);
+			current.display();
+			current = current.next;
+		}
+		System.out.println();
+	}
+	
+
+}
+
+
+

@@ -1,0 +1,5 @@
+package algorithm.dataStructure.case3;
+
+public interface Listiterator {
+
+}

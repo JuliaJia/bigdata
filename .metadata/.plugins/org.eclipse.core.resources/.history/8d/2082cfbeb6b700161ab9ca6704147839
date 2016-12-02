@@ -1,0 +1,21 @@
+package algorithm.dataStructure.stack2;
+
+public class TestNode {
+
+	public static void main(String[] args) {
+		Node node = new Node();
+		Linked stack = new Linked();
+		stack.stackPush(node, 1);
+		stack.stackPush(node, 2);
+		stack.stackPush(node, 3);
+		stack.stackPush(node, 4);
+		System.out.println(stack.length());
+		System.out.println(node.data());
+		stack.stackPop(node);
+		System.out.println(stack.count);
+		
+		stack.displayAllNodes();
+
+	}
+
+}

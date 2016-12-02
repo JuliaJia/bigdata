@@ -1,0 +1,39 @@
+package algorithm;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import job.job02.Student;
+
+public class StringGame {
+
+	public static void main(String[] args) {
+		String[] words = wordsList();
+		char[] chars = {};
+		List<Character> word_char = new ArrayList<Character>();
+		
+		for(int i = 0; i < words.length; i++){
+			for(int j = 0; j < words[i].toCharArray().length; j++){
+				word_char.add(words[i].toCharArray()[j]);
+			}
+		}
+		System.out.println(word_char);
+		
+
+	}
+	
+	public static String[] wordsList(){
+		String words[] = {"this","that","fat","two"};
+		return words;
+	}
+	
+	public static char[] charList(String[] wordList){
+		char chars[] = {};
+		for (int i = 0; i < wordsList().length; i++){
+			System.out.println(wordList[i].chars());
+		}
+		return chars;
+	}
+	
+
+}

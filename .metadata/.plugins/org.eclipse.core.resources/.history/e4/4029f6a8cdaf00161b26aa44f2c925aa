@@ -1,0 +1,70 @@
+package algorithm.dataStructure.linkedList2;
+//我们先定义link类！！！
+
+
+public class link {
+	//先来两个初始化需要用到的变量；
+	private link next;
+	private int data;
+	
+	//在来link的构造函数
+	link(int it,link nextval){
+		data = it;
+		next = nextval;
+	}
+	
+	//link构造函数重载
+	link(link nextval){
+		next = nextval;
+	}
+	
+	link(int it) {
+		data = it;
+	}
+	
+	
+	//定义next方法
+	public link next(){
+		return next;
+	}
+	
+	//定义setnext方法
+	public link setnext(link nextval){
+		next = nextval;
+		return next;
+	}
+	
+	public int data(){
+		return data;
+	}
+	
+	public int setdata(int it){
+		data = it;
+		return data;
+	}
+	
+	link freel = null;
+	
+	public link get(link nextval){
+		if(freel == null){
+			return new link(nextval);
+		}
+		link temp = freel;
+		freel = freel.next();
+		temp.setnext(nextval);
+		return temp;
+	}
+	
+	public void addData(int it){
+		link link1 = new link(it);
+		link1.next = next;
+		next = link1;
+		
+	}
+	
+	public void display(){
+		System.out.println(data + " ");
+	}
+
+
+}

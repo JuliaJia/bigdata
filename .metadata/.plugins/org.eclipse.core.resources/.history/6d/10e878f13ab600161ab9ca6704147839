@@ -1,0 +1,72 @@
+package algorithm.dataStructure.stack1;
+
+import java.util.Objects;
+
+public class ListStack {
+	
+	public int count;
+	
+	public ListStack(){
+		count = 0;
+	}
+	
+
+	public easyStack initStack(int length){
+		easyStack stack = new easyStack(length);
+		return stack;
+	}
+	
+	
+	public easyStack listPush(easyStack stack, int element){
+		if(stack.objects()[0] == null){
+			Object[] list = stack.objects();
+			for(int i = list.length - 1; i > 0; i--){
+				if(stack.bottom() == 0){
+					list[i] = element;
+				}else if(list[i - 1] == null && list[i] != null){
+					list[i - 1] = element;
+					break;
+				}
+			}
+			if(stack.top() != 0){
+				stack.setTop(stack.top() - 1);
+				stack.setObjects(list);
+			}else{
+				stack.setObjects(list);
+			}
+			return stack;
+		}else{
+			System.out.println("Stack is Full!");
+			return stack;
+		}
+	}
+	
+	public easyStack listPop(easyStack stack){
+		 if(stack.top() != 0){
+			 Object[] list = stack.objects();
+			 for(int i = list.length ; i > 0; i--){
+				 if(list[i - 1] == null && list[i] != null){
+					 list[i] = null;
+					 break;
+				 }
+				 
+			 }
+			 if(stack.top() != stack.bottom()){
+				 stack.setTop(stack.top() + 1);
+				 stack.setObjects(list);
+			 }else{
+				 stack.setTop(0);
+				 stack.setBottom(0);
+				 stack.setObjects(list);
+			 }
+			 return stack;
+		 }else{
+			 System.out.println("Stack is Null!!!!");
+			 return stack;
+		 }
+
+		 
+	}
+	
+
+}

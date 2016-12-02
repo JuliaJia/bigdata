@@ -1,0 +1,57 @@
+package algorithm;
+
+import javax.security.auth.kerberos.KerberosKey;
+
+public class TimeCount {
+	private static int init = 1;
+
+
+	public static void main(String[] args) {
+		int j = 1;
+		timeCount(30,init,j);
+
+
+
+	}
+	
+	public static int count(int i){
+		if(i == 1){
+			++i;
+			return i;
+		}
+		i++;
+		return i;
+	}
+	public static void timeCount(int i , int init,int j){
+		int a = j + init;
+		if(i > 1){
+			
+			timeCount(i/2,j,a);
+			/*if(j == 1){
+				++j;
+				timeCount(i/2,j);
+			}else{
+				j++;
+				timeCount(i/2,j);
+			}*/
+			//System.out.println(j);
+		}else{
+			int count = a - j;
+			System.out.println(count);
+		}
+		System.out.println(i / 2);
+		//System.out.println(j);
+
+
+
+
+
+
+
+
+		
+		
+	}
+
+	
+}

@@ -1,0 +1,29 @@
+package algorithm;
+
+import java.awt.event.ItemEvent;
+import java.util.Collection;
+import java.util.IllegalFormatCodePointException;
+import java.util.Iterator;
+
+public class linkedList {
+	
+
+
+
+	public static void main(String[] args) {
+		Collection<int[]> collection = null;
+		int[] testlist = {1,2,3,4,5,6};
+		collection.add(testlist);
+		print(collection);
+
+	}
+	
+	private static void print(Collection<int[]> collection){
+		Iterator<int[]> itr = collection.iterator();
+		while(itr.hasNext()){
+			int[] item = itr.next();
+			System.out.println(item);
+		}
+	}
+
+}

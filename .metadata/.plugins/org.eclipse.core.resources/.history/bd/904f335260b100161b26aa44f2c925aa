@@ -1,0 +1,16 @@
+package algorithm.dataStructure.case1;
+
+public class TestCase {
+
+	public static void main(String[] args) {
+		Dlink curr = new Dlink();
+		curr.addBefore(4,3);
+		curr.addBefore(3,2);
+		curr.addBefore(2,1);
+		curr.addBefore(1,0);
+
+		curr.displayAll();
+
+	}
+
+}

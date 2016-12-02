@@ -1,0 +1,18 @@
+package algorithm.dataStructure.case2;
+
+
+
+public class Dlink {
+	
+	public Node head;
+	public Node tail;
+	
+	public int count;
+	
+	public Dlink() {
+		count = 0;
+		head = null;
+		tail = null;
+	}
+	
+

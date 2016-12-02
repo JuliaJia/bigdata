@@ -1,0 +1,22 @@
+package algorithm;
+
+import javax.security.auth.kerberos.KerberosKey;
+
+public class TimeCount {
+
+	public static void main(String[] args) {
+		timeCount(20);
+
+	}
+	
+	public static void timeCount(int i){
+		if(i >= 1){
+			timeCount(i/2);
+		}
+		System.out.println(i);
+		
+		
+	}
+
+	
+}

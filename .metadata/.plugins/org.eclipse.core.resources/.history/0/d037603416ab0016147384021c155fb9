@@ -1,0 +1,21 @@
+package algorithm;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StringGame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static String[] wordsList(){
+		String words[] = {"this","that","fat","two"};
+		return words;
+		
+	}
+	
+	
+
+}

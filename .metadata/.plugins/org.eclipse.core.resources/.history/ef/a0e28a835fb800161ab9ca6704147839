@@ -1,0 +1,5 @@
+package hadoop_senior.hadoop_hdfs;
+
+public class HdfsApp {
+
+}

@@ -1,0 +1,16 @@
+package algorithm.dataStructure.linkedList;
+
+public class Linked {
+
+		public Node first;
+		public Linked(){
+			this.first = null;
+		}
+		
+		public void addFirstNode(int data){
+			Node node = new Node(data);
+			node.next = first;
+			first = node;
+		}
+
+}

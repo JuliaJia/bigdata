@@ -1,0 +1,52 @@
+package algorithm.dataStructure.stack2;
+
+import javax.print.attribute.standard.RequestingUserName;
+
+public class Node {
+	private Node next;
+	private Node top;
+	private int count;
+	private int data;
+	
+	public Node(){
+		next = null;
+		top = null;
+		count = 0;
+		data = 0;
+	}
+	
+	public Node top(){
+		return top;
+	}
+	
+	public Node setTop(Node new_top){
+		return top = new_top;
+	}
+	
+	public Node next(){
+		return next;
+		
+	}
+	
+	public Node setNext(Node new_next){
+		return next = new_next;
+	}
+	
+	public int data(){
+		return data;
+	}
+	
+	public int setData(int new_data){
+		return data = new_data;
+	}
+	
+	public int count(){
+		return count;
+	}
+	
+	public int setCount(){
+		return count += 1;
+	}
+	
+
+}

@@ -1,0 +1,32 @@
+package algorithm.dataStructure.case2;
+
+public class Dlink {
+	
+	public Node head;
+	public Node tail;
+	
+	public int count;
+	
+	public Dlink() {
+		count = 0;
+		head = null;
+		tail = null;
+	}
+	
+	public void addAfter(int it){
+		Node curr = new Node(it);
+		curr.setBefour(tail);
+		tail = curr;
+		count++;
+	}
+	
+	public void displayAll(){
+		Node curr = head;
+		while(curr != null){
+			curr.display();
+			curr = curr.next();
+		}
+		
+	}
+
+}

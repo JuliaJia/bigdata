@@ -1,0 +1,13 @@
+package algorithm.dataStructure.stack2;
+
+public class TestNode {
+
+	public static void main(String[] args) {
+		Node node = new Node();
+		Linked stack = new Linked();
+		stack.stackPush(node, 1);
+		System.out.println(stack.count);
+
+	}
+
+}

@@ -1,0 +1,24 @@
+package algorithm.dataStructure.case3;
+
+import java.util.List;
+import java.util.Arrays;
+
+
+
+public class TestListIterator {
+
+	public static void main(String[] args) {
+		String[] words = new String[]{"Apple","Earth","Mars","Pluto"};
+		List list = Arrays.asList(words);
+		printforward(list);
+
+	}
+	
+	private static void printforward(List list){
+		Listiterator listiterator = (Listiterator) list.listIterator(list.size());
+		while(listiterator.hasprevious()){
+			System.out.println(listiterator.previous());
+		}
+	}
+
+}

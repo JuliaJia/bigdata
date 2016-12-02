@@ -1,0 +1,26 @@
+package algorithm.dataStructure.case1;
+
+public class TestCase {
+
+	public static void main(String[] args) {
+		Dlink curr = new Dlink();
+		curr.addBefore(4,3);
+		curr.addBefore(3,2);
+		curr.addBefore(2,1);
+		curr.addBefore(1,0);
+		
+		
+		Dlink curr2 = new Dlink();
+		
+		curr2.addBefore(4,3);
+		
+		Object a = curr.findN(3);
+
+		//curr.displayAll();
+		
+		System.out.println(curr.count);
+		System.out.println(curr.addPolynominalOne(curr, curr2));
+
+	}
+
+}

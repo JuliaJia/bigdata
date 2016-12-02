@@ -1,0 +1,42 @@
+package algorithm;
+
+public class StringGame2 {
+	private static String[] words = {"this","two","fat","that"};
+	private static char[][] gameChar = {{'t','h','i','s'},{'w','a','t','s'},{'o','a','h','g'},{'f','g','d','t'}};
+	
+	public static void main(String[] args) {
+		String direction;
+		String[][][] wordCheck = {{{"right","down","rightdown"},{"down"},{"down"},{"left","down","leftdown"}},{{"right"},{"jump"},{"jump"},{"left"}},{{"right"},{"jump"},{"jump"},{"left"}},{{"right","up","rightup"},{"up"},{"up"},{"left","up","leftup"}}};
+		for(int i = 0;i < wordCheck.length;i++){
+			for(int j = 0;j < wordCheck[i].length;j++){
+				for(int a = 0; a < wordCheck[i][j].length;a++){
+					direction = wordCheck[i][j][a];
+					switch (direction) {
+					case "right":
+						break;
+					case "down":
+						break;
+					case "up":
+						break;
+					case "left":
+						break;
+					case "leftup":
+						break;
+					case "leftdown":
+						break;
+					case "rightdown":
+						break;
+					case "rightup":
+						break;
+					case "jump":
+						break;
+					default:
+						break;
+					}
+				}
+			}
+		}
+
+	}
+
+}

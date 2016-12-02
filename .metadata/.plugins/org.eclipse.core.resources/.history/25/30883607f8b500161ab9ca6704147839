@@ -1,0 +1,10 @@
+package algorithm.dataStructure.case3;
+
+public class TestListIterator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

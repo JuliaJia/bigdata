@@ -1,0 +1,62 @@
+package algorithm.dataStructure.doubleLinkedList1;
+
+public class Node {
+	
+	//数据域、头指针域、尾指针域定义
+	protected Node next;
+	protected int data;
+	protected Node befour;
+	
+	//Node构造方法
+	public Node(){
+		
+	}
+	
+	public Node(Node n,Node b,int d){
+		next = n;
+		data = d;
+		befour = b;
+	}
+	
+	public Node(Node n,Node b) {
+		next = n;
+		befour = b;
+	}
+	
+	
+	//尾指针域的两个方法
+	public Node next(){   //尾指针域值的获取
+		return next;
+	}
+	
+	public Node setNext(Node nextval){  //尾指针域值的设置
+		return next = nextval;
+		
+	}
+	
+	//头指针域的两个方法
+	public Node befour(){
+		
+		return befour;
+	}
+	
+	public Node setBefour(Node befourval){
+		return befour = befourval;
+	}
+	
+	//数据域的两个方法
+	
+	public int data(){
+		return data;
+	}
+	
+	public int setData(int it){
+		return data = it;
+	}
+	
+	public void display(){
+		System.out.println(data + " ");
+	}
+	
+
+}

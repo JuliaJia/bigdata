@@ -1,0 +1,22 @@
+package algorithm;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StringGame {
+
+	public static void main(String[] args) {
+		String[] words = wordsList();
+		System.out.println(words[0]);
+		
+
+	}
+	
+	public static String[] wordsList(){
+		String words[] = {"this","that","fat","two"};
+		return words;
+	}
+	
+	
+
+}

@@ -23,7 +23,9 @@ public class Job1 {
 		Book[] books = new Book[]{
 				new Book("1","逗逼宝典"),
 				new Book("2","逗逼圣经"),
-				new Book("3","逗逼是怎样炼成的")
+				new Book("3","逗逼是怎样炼成的"),
+				new Book("4","逗逼神教的那些事儿"),
+				new Book("5","逗逼神教的那些事儿2")
 				
 		};
 		Job1 j2x = new Job1();
@@ -33,7 +35,7 @@ public class Job1 {
 
 	}
 	private void buildXmlDoc(Book[] books) throws  IOException{
-		Element root = new Element("books").setAttribute("count","4");
+		Element root = new Element("四号图书馆").setAttribute("id","4");
 		Document doc = new Document(root);
 		for(int i = 0;i < books.length;i++){
 			Element element = new Element("book");

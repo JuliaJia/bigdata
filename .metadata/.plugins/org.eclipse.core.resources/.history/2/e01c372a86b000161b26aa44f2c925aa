@@ -1,0 +1,31 @@
+package algorithm.dataStructure.doubleLinkedList1;
+
+
+
+public class TestDLinkedList {
+	
+
+
+	public static void main(String[] args) {
+		Dlink testList = new Dlink();
+		testList.addBefour(1);
+		testList.addBefour(2);
+		testList.addBefour(3);
+		testList.addBefour(4);
+		testList.addBefour(5);
+		testList.addBefour(6);
+		testList.displayAll();
+
+
+	}
+	
+	
+
+	
+
+	
+	
+
+
+}
+

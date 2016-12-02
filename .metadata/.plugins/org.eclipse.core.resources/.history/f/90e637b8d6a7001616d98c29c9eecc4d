@@ -1,0 +1,19 @@
+package j2se.core.io.xml;
+
+public class master {
+	private String masterName;
+	private int masterPhone;
+	public String getMasterName() {
+		return masterName;
+	}
+	public void setMasterName(String masterName) {
+		this.masterName = masterName;
+	}
+	public int getMasterPhone() {
+		return masterPhone;
+	}
+	public void setMasterPhone(int masterPhone) {
+		this.masterPhone = masterPhone;
+	}
+	
+}

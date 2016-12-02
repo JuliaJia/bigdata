@@ -1,0 +1,123 @@
+package algorithm.dataStructure.case2;
+
+public class TestJosephus {
+
+	public static void main(String[] args) {
+		
+		Dlink curr = new Dlink();
+		Dlink curr2 = new Dlink();
+
+		int n = 8;
+		int m = 4;
+		int id;
+		int count1 = m;
+		int count2;
+		
+		for(int i = n ; i > 0; i--){
+			
+			if(count1 != 1){
+				if(count1 != 4){
+					curr.addAfter(i, count1);
+				}
+				count1--;
+			}else{
+				curr.addAfter(i, count1);
+				count1 = 4;
+			}
+			
+				
+		}
+		count2 = curr.count;
+		Node node = curr.tail;
+		int count3 = 1;
+		while(count2 != 1){
+			if(count3 < 4){
+				if(node.befour() != null){
+					node.setData(count3);
+					node = node.befour();
+				}else{
+					node.setData(count3);
+					node = curr.tail;
+				}
+
+				count3--;
+			}else{
+				count3 = 4;
+			}
+			
+			count2--;
+				
+			}
+		
+
+		
+		/*Node node = curr.tail;
+		count2 = curr.count;
+		curr.displayAll();
+		while(count2 != 1){
+			
+			id = node.id();
+			if(node.befour() != null){
+				if(count1 != 1){
+					if(count1 != 4){
+						node.setData(count1);
+						curr.displayAll();
+					}else{
+						curr.delNode(4);
+						count2 = curr.count;
+					}
+					count1--;
+				}else{
+					node.setData(count1);
+					count1 = 4;
+				}
+				
+			}
+		}*/
+		/*for(int i = 0; i < curr.count;i++){
+			if(curr.findNode(4) != null){
+				curr.delNode(4);
+			}
+			
+		}*/
+		curr.displayAll();
+		
+		/*for(int i = n ; i > 0; i--){
+			for(int j = 0; j < m ; j++){
+				if(node != null && node.befour() != null){
+					node = node.befour();
+					System.out.println(curr2.findNode(node));
+
+				}else if(node == null){
+					
+					node = curr.tail;
+					System.out.println(curr2.findNode(node));
+					
+					
+					
+				}else if(node.befour() == null){
+					node.setBefour(curr.tail);
+					System.out.println(curr2.findNode(node));
+					node = node.befour();
+				}
+				
+		}*/
+		/*Node node = curr.tail;
+		Node node2 = null;
+		//System.out.println(curr.count);
+		int size = curr.count;*/
+		
+				
+				
+		}
+		
+		
+
+		
+
+		
+
+
+	}
+
+

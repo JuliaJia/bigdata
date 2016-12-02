@@ -1,0 +1,26 @@
+package algorithm;
+
+public class PrintNum {
+
+	public static void main(String[] args) {
+		System.out.println(PrintDigit(15));
+
+	}
+	
+	
+	public static int PrintOut(int i){
+		return i;
+	}
+	
+	public static int PrintDigit(int i){
+		if(i >= 10){
+			int j = PrintDigit(i / 10);
+			return j;
+		}else{
+		int j = PrintOut(i % 10);
+		return j;
+		}
+		
+	}
+
+}

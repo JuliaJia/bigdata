@@ -1,0 +1,78 @@
+package algorithm;
+
+import java.nio.charset.spi.CharsetProvider;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.bind.NotIdentifiableEvent;
+
+import job.job02.Student;
+
+public class StringGame {
+
+	public static void main(String[] args) {
+		String[] words = wordsList();
+		List<Character> characters = charList(words);
+		//List<Character> clearList = clear(characters);
+		char[][] charsList = doubleDimensionList(characters);
+		for(int i = 0; i < charsList.length;i++){
+			System.out.println(charsList[i]);
+		}
+		
+		
+
+	}
+	
+	public static String[] wordsList(){
+		String words[] = {"this","that","fat","two"};
+		return words;
+	}
+	
+	public static List<Character> charList(String[] words){
+		List<Character> word_char = new ArrayList<Character>();
+		for(int i = 0; i < words.length; i++){
+			for(int j = 0; j < words[i].toCharArray().length; j++){
+				word_char.add(words[i].toCharArray()[j]);
+			}
+		}
+		return word_char;
+	}
+	
+	public static List<Character> clear(List<Character> dirtyList){
+		List<Character> clearList = new ArrayList<Character>();
+		for(char chars : dirtyList){
+			if(!clearList.contains(chars)){
+				clearList.add(chars);
+			}
+		}
+		return clearList;
+	}
+	public static char[][] doubleDimensionList(List<Character> dirtyList){
+		char[][] doubleCharList = new char[4][4];
+		char[] charsList = new char[14];
+		System.out.println(charsList.length);
+		int j = 0;
+		int listLength = dirtyList.size();
+		//System.out.println(listLength);
+		//System.out.println(dirtyList);
+		for(Character chars : dirtyList){
+			charsList[j] = chars;
+			j++;
+		}
+
+
+		
+		
+			for(int count = 0; count < 4 ; count++){
+				for(int i = 0; i < 4; i++){
+					for(int a = 0; a < charsList.length;a++){
+						doubleCharList[i][count] = charsList[a];
+					//System.out.println(charsList[a]);
+				}
+			}
+		}
+		
+		return doubleCharList;
+	}
+
+}

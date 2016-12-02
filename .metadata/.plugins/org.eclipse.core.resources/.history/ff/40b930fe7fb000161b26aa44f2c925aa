@@ -1,0 +1,26 @@
+package algorithm.dataStructure.doubleLinkedList1;
+
+public class TestDLinkedList {
+
+	public static void main(String[] args) {
+		addBefour(5);
+		addBefour(4);
+		addBefour(3);
+		addBefour(2);
+		addBefour(1);
+
+	}
+	
+	
+	public static void addBefour(int it){
+		Node curr = new Node();
+		Node newNode = new Node(curr.next(),curr,it);
+		curr.setNext(newNode);
+		if(curr.next().next() != null){
+			curr.next().next().setBefour(curr.next());
+			
+		}
+	}
+
+}
+

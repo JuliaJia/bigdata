@@ -1,0 +1,20 @@
+package algorithm.dataStructure.stack1;
+
+
+
+public class TestStack {
+
+	public static void main(String[] args) {
+		ListStack node = new ListStack();
+		easyStack stack = node.initStack(10);
+		stack = node.listPush(stack, 1);
+		stack = node.listPush(stack, 10);
+		int length = stack.objects().length - 1;
+		System.out.println(stack.bottom());
+		System.out.println(stack.objects()[length]);
+		stack = node.listPop(stack);
+		System.out.println(stack.objects()[length]);
+
+	}
+
+}

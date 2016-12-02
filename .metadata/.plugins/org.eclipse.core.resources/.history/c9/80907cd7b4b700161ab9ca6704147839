@@ -1,0 +1,36 @@
+package algorithm.dataStructure.stack2;
+
+public class Linked {
+	
+	public Node head;
+	public Node tag;
+	public int count;
+	
+	public Linked(){
+		head = null;
+		tag = null;
+		count = 0;
+	}
+	
+	public void stackPop(Node stack){
+		stack = head;
+		head = stack.next();
+		stack.setData(stack.data());
+		count--;
+	}
+	
+	public void stackPush(Node stack,Object data){
+		stack.setData(data);
+		stack.setNext(head);
+		head = stack;
+		stack.setTop(head);
+		count++;
+	}
+	
+	public int length(){
+		return count;
+	}
+	
+	
+
+}

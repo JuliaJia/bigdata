@@ -1,0 +1,15 @@
+package algorithm.dataStructure.case2;
+
+public class TestJosephus {
+
+	public static void main(String[] args) {
+		
+		Dlink curr = new Dlink();
+		
+		curr.addAfter(1);
+		curr.addAfter(2);
+		curr.addAfter(3);
+
+	}
+
+}

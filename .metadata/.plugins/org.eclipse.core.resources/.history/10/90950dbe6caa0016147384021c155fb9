@@ -1,0 +1,12 @@
+package j2se.core.thread.Basic;
+
+import java.text.Format;
+
+public class ThirdThread {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
